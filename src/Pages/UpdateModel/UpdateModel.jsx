@@ -60,7 +60,7 @@ const UpdateModel = () => {
       <div className="card-body p-6 relative">
         <h2 className="text-2xl font-bold text-center mb-6">Update Model</h2>
         <form onSubmit={handleSubmit} className="space-y-4">
-          {/* Name Field */}
+         
           <div>
             <label className="label font-medium">Name</label>
             <input
@@ -73,7 +73,7 @@ const UpdateModel = () => {
             />
           </div>
 
-          {/* Framework Dropdown */}
+      
           <div>
             <label className="label font-medium">Framework</label>
             <select
@@ -94,7 +94,7 @@ const UpdateModel = () => {
             </select>
           </div>
 
-          {/* Use Case Dropdown */}
+        
           <div>
             <label className="label font-medium">Use Case</label>
             <select
@@ -114,7 +114,7 @@ const UpdateModel = () => {
             </select>
           </div>
 
-          {/* Dataset Input */}
+         
           <div>
             <label className="label font-medium">Dataset</label>
             <input
@@ -127,7 +127,7 @@ const UpdateModel = () => {
             />
           </div>
 
-          {/* Description Textarea */}
+        
           <div>
             <label className="label font-medium">Description</label>
             <textarea
@@ -140,7 +140,7 @@ const UpdateModel = () => {
             ></textarea>
           </div>
 
-          {/* Image URL */}
+        
           <div>
             <label className="label font-medium">Image URL</label>
             <input
@@ -153,7 +153,7 @@ const UpdateModel = () => {
             />
           </div>
 
-          {/* Submission Button */}
+      
           <button
             type="submit"
             className="btn w-full text-white mt-6 rounded-full bg-gradient-to-r from-blue-500 to-blue-600 hover:from-blue-600 hover:to-blue-700"

@@ -12,9 +12,9 @@ import UpdateModel from "../Pages/UpdateModel/UpdateModel";
 import MyModels from "../Pages/MyModels/MyModels";
 import MyPurchases from "../Pages/MyPurchases/MyPurchases";
 
-// Custom Error Page
+
 const ErrorPage = ({ error }) => {
-  console.error('Route Error:', error); // Debug log
+  console.error('Route Error:', error);
   return (
     <div className="min-h-screen flex items-center justify-center bg-base-100">
       <div className="text-center p-8">
@@ -86,8 +86,8 @@ export const router = createBrowserRouter([
             headers: { Authorization: `Bearer ${token}` },
           });
           if (!res.ok) {
-            console.warn(`Model ID ${params.id} not found (404)`); // Debug
-            return { success: false, message: 'Model not found' }; // Return error object
+            console.warn(`Model ID ${params.id} not found (404)`); 
+            return { success: false, message: 'Model not found' }; 
           }
           return res.json();
         },
@@ -122,7 +122,7 @@ export const router = createBrowserRouter([
           });
           if (!res.ok) {
             console.warn(`Update loader: Model ID ${params.id} not found`);
-            return { success: false, message: 'Model not found' }; // Return error
+            return { success: false, message: 'Model not found' }; 
           }
           return res.json();
         },

@@ -9,17 +9,17 @@ const Login = () => {
 
   const location = useLocation();
   const navigate = useNavigate();
-  console.log(location);
+  // console.log(location);
 
   const handleLogIn = (event) => {
     event.preventDefault();
     const email = event.target.email.value;
     const password = event.target.password.value;
 
-    console.log(email, password);
+    // console.log(email, password);
     signInUser(email, password)
       .then((result) => {
-        console.log(result.user);
+        // console.log(result.user);
         event.target.reset();
         navigate(location.state || "/");
       })
@@ -31,7 +31,7 @@ const Login = () => {
   const handleGoogleSignIn = () => {
     signInWithGoogle()
       .then((result) => {
-        console.log(result.user);
+        // console.log(result.user);
         navigate(location?.state || "/");
       })
       .catch((error) => {

@@ -7,13 +7,13 @@ import toast from "react-hot-toast";
 const ModelDetails = ({ id: propId, purchaseId, onClose, onRefreshPurchases }) => {
   const navigate = useNavigate();
   const { id: paramId } = useParams();
-  const modelId = propId || paramId; // Use prop first for modal
+  const modelId = propId || paramId; 
   const [model, setModel] = useState(null);
   const [loading, setLoading] = useState(true);
   const { user } = useContext(AuthContext);
   const [refetch, setRefetch] = useState(false);
 
-  // Fetch model data
+  
   useEffect(() => {
     if (!modelId || !user?.accessToken) return;
 
@@ -37,7 +37,7 @@ const ModelDetails = ({ id: propId, purchaseId, onClose, onRefreshPurchases }) =
       .finally(() => setLoading(false));
   }, [user?.accessToken, modelId, refetch, navigate, propId]);
 
-  // Delete model (for creator)
+ 
   const handleDeleteModel = () => {
     if (model?.createdBy !== user?.email) {
       toast.error("You are not authorized to delete this model");
@@ -73,7 +73,7 @@ const ModelDetails = ({ id: propId, purchaseId, onClose, onRefreshPurchases }) =
     });
   };
 
-  // Delete purchased model (for MyPurchases)
+
   const handleDeletePurchase = () => {
     if (!purchaseId) return toast.error("Purchase ID not found");
 
