@@ -28,7 +28,7 @@ const UpdateModel = () => {
     }
 
     try {
-      const token = await user.getIdToken(true); // Refresh token
+      const token = await user.getIdToken(true); 
       localStorage.setItem('token', token);
       console.log('Token refreshed:', token ? 'YES' : 'NO');
 
